@@ -13,6 +13,7 @@ jobs:
         with:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
+          repositories: subtree-target
       - uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
