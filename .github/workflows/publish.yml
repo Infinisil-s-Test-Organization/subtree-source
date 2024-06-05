@@ -16,6 +16,7 @@ jobs:
           repositories: subtree-target
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
       - name: Mirror
         run: git subtree -P subtree push https://github.com/Infinisil-s-Test-Organization/subtree-target main
